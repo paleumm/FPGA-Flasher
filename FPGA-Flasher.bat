@@ -1,6 +1,7 @@
 @ECHO OFF
 SET bitfile=%1
 if "%~x1" NEQ ".bit" goto error
+set path=%~dp0
 :con
 cls
 @ECHO OFF
@@ -28,7 +29,7 @@ xc3sprog.exe -c ftdi -L -v -p 0 %bitfile%
 PAUSE
 goto con
 :prom
-xc3sprog.exe -c ftdi -L "%cd%\spiflasherLX9.bit"
+xc3sprog.exe -c ftdi -L "%~dp0\spiflasherLX9.bit"
 xc3sprog.exe -c ftdi -L -v -R -p 0 -I %bitfile%
 PAUSE
 goto con
