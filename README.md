@@ -25,7 +25,7 @@ $ sudo apt -y install xc3sprog
 
 ### Normal mode
 ```bash 
-$ xc3sprog -c ftdi v -p 0 <path/to/file.bit>
+$ xc3sprog -c ftdi -v -p 0 <path/to/file.bit>
 ```
 
 ### Prom mode
